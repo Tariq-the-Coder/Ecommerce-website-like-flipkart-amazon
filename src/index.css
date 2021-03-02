@@ -441,8 +441,14 @@ button.close-sidebar {
   }
 }
 
+@media (max-width: 420px) {
+  .grid-container {
+    grid-template-rows: 13rem 1fr 5rem;
+  }
+}
+
 @media (max-width: 350px) {
   .grid-container {
-    grid-template-rows: 12rem 1fr 5rem;
+    grid-template-rows: 13rem 1fr 5rem;
   }
 }
