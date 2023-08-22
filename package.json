@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "proxy": "https://fine-erin-wildebeest-yoke.cyclic.cloud/",
+  "proxy": "https://fine-erin-wildebeest-yoke.cyclic.cloud",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
