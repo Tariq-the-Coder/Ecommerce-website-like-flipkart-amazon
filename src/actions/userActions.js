@@ -12,7 +12,7 @@ import {
 export const register = (name, email, password) => async (dispatch) => {
     dispatch({ type: USER_REGISTER_REQUEST, payload: { email, password } });
     try {
-        const { data } = await Axios.post('https://dreamshopping.herokuapp.com/api/users/register', {
+        const { data } = await Axios.post('https://fine-erin-wildebeest-yoke.cyclic.cloud/api/users/register', {
             name,
             email,
             password,
@@ -34,7 +34,7 @@ export const register = (name, email, password) => async (dispatch) => {
 export const signin = (email, password) => async (dispatch) => {
     dispatch({ type: USER_SIGNIN_REQUEST, payload: { email, password } });
     try {
-        const { data } = await Axios.post('https://dreamshopping.herokuapp.com/api/users/signin', { email, password });
+        const { data } = await Axios.post('https://fine-erin-wildebeest-yoke.cyclic.cloud/api/users/signin', { email, password });
         dispatch({ type: USER_SIGNIN_SUCCESS, payload: data });
         localStorage.setItem('userInfo', JSON.stringify(data));
     } catch (error) {
