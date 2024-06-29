@@ -16,7 +16,7 @@ export const listProduct = () => async (dispatch) => {
     type: PRODUCT_LIST_REQUEST,
   });
   try {
-    const { data } = await Axios.get('https://fine-erin-wildebeest-yoke.cyclic.cloud/api/products');
+    const { data } = await Axios.get('https://dreamshopping.onrender.com/api/products');
     dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
   } catch (error) {
     dispatch({ type: PRODUCT_LIST_FAIL, payload: error.message });
@@ -31,7 +31,7 @@ export const listProducts = ({
     type: PRODUCT_LIST_REQUEST,
   });
   try {
-    const { data } = await Axios.get (`https://fine-erin-wildebeest-yoke.cyclic.cloud/api/products?name=${name}&category=${category}`);
+    const { data } = await Axios.get (`https://dreamshopping.onrender.com/api/products?name=${name}&category=${category}`);
     dispatch({ type: PRODUCT_LIST_SUCCESS, payload: data });
   } catch (error) {
     dispatch({ type: PRODUCT_LIST_FAIL, payload: error.message });
@@ -43,7 +43,7 @@ export const listProductCategories = () => async (dispatch) => {
     type: PRODUCT_CATEGORY_LIST_REQUEST,
   });
   try {
-    const { data } = await Axios.get(`https://fine-erin-wildebeest-yoke.cyclic.cloud/api/products/categories`);
+    const { data } = await Axios.get(`https://dreamshopping.onrender.com/api/products/categories`);
     dispatch({ type: PRODUCT_CATEGORY_LIST_SUCCESS, payload: data });
   } catch (error) {
     dispatch({ type: PRODUCT_CATEGORY_LIST_FAIL, payload: error.message });
@@ -55,7 +55,7 @@ export const listProductCategories = () => async (dispatch) => {
 export const detailsProduct = (productId) => async (dispatch) => {
   dispatch({ type: PRODUCT_DETAILS_REQUEST, payload: productId });
   try {
-    const { data } = await Axios.get(`https://fine-erin-wildebeest-yoke.cyclic.cloud/api/products/${productId}`);
+    const { data } = await Axios.get(`https://dreamshopping.onrender.com/api/products/${productId}`);
     dispatch({ type: PRODUCT_DETAILS_SUCCESS, payload: data });
   } catch (error) {
     dispatch({
